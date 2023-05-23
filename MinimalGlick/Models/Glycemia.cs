@@ -1,11 +1,13 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
+using System.Diagnostics.CodeAnalysis;
 
 namespace MinimalGlick.Models
 {
     public class Glycemia
     {
         [BsonId]
-        [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)] 
+        [BsonElement("Id")]
+        [NotNull]
         public int Id { get; set; }
 
         [BsonElement("DateTimeRecord")]

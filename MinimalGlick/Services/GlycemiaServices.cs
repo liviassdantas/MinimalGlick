@@ -20,7 +20,7 @@ namespace MinimalGlick.Services
         public async Task<List<Glycemia>> GetGlycemiasAsync ()=> 
             await _glycemiaCollection.Find(_ => true).ToListAsync();
         
-        public async Task CreateGlycemiasAsync (Glycemia glycemia) =>
+        public async Task CreateMeasureAsync (Glycemia glycemia) =>
             await _glycemiaCollection.InsertOneAsync(glycemia);
 
     }
