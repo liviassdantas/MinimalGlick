@@ -1,7 +1,14 @@
 using Swashbuckle;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using MinimalGlick.Models;
+using MinimalGlick.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<GlycemiaDatabaseSettings>(
+    builder.Configuration.GetSection("GlycemiaDatabase"));
+
+builder.Services.AddSingleton<GlycemiaServices>();
 
 builder.Services.AddControllers();
 

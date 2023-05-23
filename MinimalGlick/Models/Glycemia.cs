@@ -2,7 +2,7 @@
 
 namespace MinimalGlick.Models
 {
-    public class GlycemiaModel
+    public class Glycemia
     {
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)] 
